@@ -1,7 +1,7 @@
 # Environment variables
 .env
 # pipenv
-*_env/
+*env/
 #MacOS files
 .DS_Store
 .AppleDouble
