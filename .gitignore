@@ -1,0 +1,8 @@
+# Environment variables
+.env
+# pipenv
+*_env/
+#MacOS files
+.DS_Store
+.AppleDouble
+.LSOverride
