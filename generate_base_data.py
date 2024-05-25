@@ -112,6 +112,7 @@ def main():
 
     # Generate and save unique players list to CSV
     unique_players = np.unique(matches_df[["player_1", "player_2"]].values)
+    unique_players = np.char.replace(unique_players, ",", " -")
     np.savetxt("unique_players.csv", unique_players, delimiter=",", fmt="%s")
 
 if __name__ == "__main__":
