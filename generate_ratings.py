@@ -85,8 +85,8 @@ plt.style.use('tableau-colorblind10')
 ratings_est = elo_model.rating_model.to_frame()
 elo_ts_est = ratings_est.pivot_table(index='valid_from', columns='key', values='rating').ffill()
 
-elo_idx = elo_ts_est.iloc[-1].sort_values().index[-8:]
-elo_ax = elo_ts_est.loc[:, elo_idx].plot(figsize=(10, 6), title='Top 8 Elo Ratings Over Time - TLG only')
+elo_idx = elo_ts_est.iloc[-1].sort_values().index[-10:]
+elo_ax = elo_ts_est.loc[:, elo_idx].plot(figsize=(18, 8), title='Top 10 Elo ratings as of TLG 159\nTLG matches only')
 elo_ax.set_xlabel('Date')
 elo_ax.set_ylabel('Rating')
 elo_ax.legend(title='Player', loc='upper left')
@@ -94,7 +94,7 @@ elo_ax.legend(title='Player', loc='upper left')
 # Save the plot as an image file
 plt.savefig('elo_ratings_plot.png', dpi=300)
 
-# # Glicko ratings need a bit of work due to some big first movers
+# # Glicko ratings need a bit of work due to some big first movers that makes the data look weird
 # #  Retrieve the fitted glicko ratings from the model & plot them
 # ratings_est = glicko_model.rating_model.to_frame()
 # ratings_est['rating_only'] = ratings_est['rating'].str[0]
