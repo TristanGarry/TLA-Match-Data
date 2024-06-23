@@ -15,6 +15,7 @@ def extract_scores(score):
     # Use only the first score if multiple scores are present
     # Multiple scores probably
     first_score = score.split(',')[0]
+    # This split should be replaced by a regex
     if first_score == "0--1":
         return 0, -1
     elif first_score == "-1-0":
