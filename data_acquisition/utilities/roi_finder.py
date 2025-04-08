@@ -45,8 +45,8 @@ cv2.destroyAllWindows()
 # Print the selected ROI coordinates
 print("Selected ROI:", roi)
 
-player_1_character = (287, 103, 128, 35)
-player_2_character = (1157, 110, -111, 24)
+player_1_character = (300, 103, 128, 40)
+player_2_character = (1200, 110, -111, 30)
 player_1_name = (291, 657, 228, 34)
 player_2_name = (939, 658, 227, 32)
 

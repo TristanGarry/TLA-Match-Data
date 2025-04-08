@@ -10,6 +10,8 @@ import logging
 # Tesseract location for MacOS when installed through brew
 pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
 
+# Add a comment to update a different file
+
 logging.basicConfig(filename='ocr_log.txt', level=logging.INFO)
 
 def preprocess_image(image, roi):
